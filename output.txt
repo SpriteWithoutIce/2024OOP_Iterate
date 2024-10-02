@@ -1,0 +1,27 @@
+Command 'registre' not found
+Command 'logiin' not found
+Command 'loggout' not found
+Command 'ppprintInfo' not found
+Command 'Printinfo' not found
+Illegal argument count
+Illegal argument count
+Illegal argument count
+Register success
+User exists
+Register success
+Illegal argument count
+Welcome to ACP, 22371001
+22371001 is online
+User id: 22371001
+Name: Mu_Jue
+Type: Student
+Print information success
+Permission denied
+22371001 Bye~
+Welcome to ACP, AD001
+User id: 22371001
+Name: Mu_Jue
+Type: Student
+Print information success
+AD001 Bye~
+----- Good Bye! -----
