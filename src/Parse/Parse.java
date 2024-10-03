@@ -4,6 +4,7 @@ package Parse;/**
  * @date 2024/10/1 21:28
  */
 
+import Course.CourseController;
 import User.UserController;
 import Utils.IO;
 
@@ -38,6 +39,7 @@ public class Parse {
         temp.add("printInfo");
         temp.add("createCourse");
         temp.add("selectCourse");
+        temp.add("listCourse");
         temp.add("cancelCourse");
 
         temp.add("switch");
@@ -59,20 +61,16 @@ public class Parse {
             return;
         }
 //        1.3
-        if (command.get(0).equals("quit")) {
-            UserController.getUserController().Quit(command);
-        }
-        if (command.get(0).equals("register")) {
-            UserController.getUserController().User_register(command);
-        }
-        if(command.get(0).equals("login")){
-            UserController.getUserController().User_login(command);
-        }
-        if(command.get(0).equals("logout")){
-            UserController.getUserController().User_logout(command);
-        }
-        if(command.get(0).equals("printInfo")){
-            UserController.getUserController().User_printInfo(command);
+        switch (command.get(0)) {
+            case "quit" -> UserController.getUserController().Quit(command);
+            case "register" -> UserController.getUserController().User_register(command);
+            case "login" -> UserController.getUserController().User_login(command);
+            case "logout" -> UserController.getUserController().User_logout(command);
+            case "printInfo" -> UserController.getUserController().User_printInfo(command);
+            case "createCourse" -> CourseController.getCourseController().createCourse(command);
+            case "listCourse" -> CourseController.getCourseController().listCourse(command);
+            case "selectCourse" -> CourseController.getCourseController().selectCourse(command);
+            case "cancelCourse" -> CourseController.getCourseController().cancelCourse(command);
         }
     }
 }

@@ -20,6 +20,7 @@ import java.util.*;
 public class Test {
     public static void main(String[] args) {
         IO.clear_file(Config.fileOutput);
+        IO.clear_file(Config.fileError);
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(Config.fileInput))) {
             String line;
             List<String> command=new ArrayList<>();

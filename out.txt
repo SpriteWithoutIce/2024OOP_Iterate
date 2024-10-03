@@ -11,25 +11,21 @@ Create course success (courseId: C-1)
 Create course success (courseId: C-2)
 C-1 OO 4_3-4 3.0 48
 C-2 CO 5_3-4 4.5 72
-List course success
 00001 Bye~
 Welcome to ACP, 22373001
 T_ea C-1 OO 4_3-4 3.0 48
 T_ea C-2 CO 5_3-4 4.5 72
-List course success
-Course does not exist
+Illegal course id
 Course does not exist
 Select course success (courseId: C-1)
 Select course success (courseId: C-2)
 22373001 Bye~
 Welcome to ACP, 00001
-Course does not exist
+Illegal course id
 Cancel course success (courseId: C-1)
 C-2 CO 5_3-4 4.5 72
-List course success
 00001 Bye~
 Welcome to ACP, 22373001
 T_ea C-2 CO 5_3-4 4.5 72
-List course success
 22373001 Bye~
 ----- Good Bye! -----

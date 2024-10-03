@@ -38,6 +38,10 @@ public class IO {
         writeToFile(errorMap.get(errorType),Config.fileOutput);
     }
 
+//    debug
+    public static void error(String content){
+        writeToFile(content,Config.fileError);
+    }
     //    clear
     public static void clear_file(String filePath){
         File file=new File(filePath);

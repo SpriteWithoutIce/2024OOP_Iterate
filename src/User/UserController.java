@@ -18,9 +18,12 @@ import static java.lang.System.exit;
  * 2024/10/1 21:47
  */
 public class UserController {
-    private TreeMap<String, User> userOnline = new TreeMap<String, User>();
-    private TreeMap<String, User> userRegist = new TreeMap<String, User>();
+    public TreeMap<String, User> userOnline = new TreeMap<String, User>();
+    public TreeMap<String, User> userRegist = new TreeMap<String, User>();
     private static final UserController userController = new UserController();
+
+    public TreeMap<String, Teacher> teachers = new TreeMap<String, Teacher>();
+    public TreeMap<String, Student> students = new TreeMap<String, Student>();
 
     public static UserController getUserController() {
         return userController;
@@ -86,6 +89,15 @@ public class UserController {
 //        新建User，并放入Register列表
         User regist = new User(user_id, name, code, type);
         userRegist.put(user_id, regist);
+        if(type.equals("Teacher")){
+            Teacher teacher=new Teacher(user_id, name, code, type);
+            teachers.put(user_id,teacher);
+        }
+        else if(type.equals("Student")){
+            Student student=new Student(user_id, name, code, type);
+            students.put(user_id,student);
+        }
+
         IO.output("Register success\n");
     }
 
@@ -206,6 +218,5 @@ public class UserController {
         }
         return true;
     }
-
 
 }
